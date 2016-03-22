@@ -1,0 +1,23 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator/index.js",
+  "scripts": {
+    "test": "mocha ./calculator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drawain/kata-bootstrap-mocha.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drawain/kata-bootstrap-mocha/issues"
+  },
+  "homepage": "https://github.com/drawain/kata-bootstrap-mocha",
+  "dependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
