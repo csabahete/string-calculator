@@ -72,5 +72,13 @@ describe('Calculator', function() {
         expect(result).to.equal(10);
       });
     });
+
+    describe('multiple delimiters', function() {
+      it('should return the sum of the numbers', function() {
+        var calculator = new Calculator();
+        var result = calculator.add("//[apple][arrow][foo]\n1arrow2apple3foo4");
+        expect(result).to.equal(10);
+      });
+    });
   });
 });
