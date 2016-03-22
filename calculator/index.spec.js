@@ -38,11 +38,22 @@ describe('Calculator', function() {
       });
     });
 
-    describe('numbers separated with newline or commas', function() {
+    describe('numbers separated with custom delimiter', function() {
       it('should return the sum of the numbers', function() {
         var calculator = new Calculator();
         var result = calculator.add("//;\n1;2;3;4");
         expect(result).to.equal(10);
+      });
+    });
+
+    describe('negative numbers', function() {
+      it('should throw an exception with the negative number', function() {
+        var calculator = new Calculator();
+        try{
+          var result = calculator.add("2,-3");
+        } catch (err) {
+          expect(err.message).to.contain('-3');
+        }
       });
     });
   });
