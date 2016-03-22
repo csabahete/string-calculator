@@ -7,10 +7,10 @@ module.exports = function Calculator() {
     var regexp = /[\n,]/;
     var delimiter =  str.split(/\n/)[0].split(/\/\//)[1];
     if (delimiter) {
-      var delimiters = delimiter.split(/\]\[/);
-      if (delimiters != '') {
+      var delimiterArray = delimiter.split(/\]\[/);
+      if (delimiterArray != '') {
         regexStr='['
-        delimiters.forEach(function (item) {
+        delimiterArray.forEach(function (item) {
           regexStr=regexStr+item.replace('[','').replace(']','')+'|';
         })
         var regexStr=regexStr+' ]';
