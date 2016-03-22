@@ -12,7 +12,7 @@ module.exports = function Calculator() {
     var numbers = [];
 
     strArray.forEach(function (item) {
-      if (item === "" || item === "//" || item === "\n") {
+      if (item === "" || item === "//" || item === "\n" || parseInt(item)>1000) {
         numbers.push(0);
         return;
       }

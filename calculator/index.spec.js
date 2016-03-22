@@ -56,5 +56,13 @@ describe('Calculator', function() {
         }
       });
     });
+
+    describe('numbers bigger than 1000', function() {
+      it('should be ignored', function() {
+        var calculator = new Calculator();
+        var result = calculator.add("2,1001");
+        expect(result).to.equal(2);
+      });
+    });
   });
 });
