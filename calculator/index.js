@@ -5,23 +5,9 @@ module.exports = function Calculator() {
 
   Calc.add = function (str) {
     var regexp = /[\n,]+/;
-
-    if (str[0] === "/") {
-      var i = 0;
-      var delimeter = "";
-      while(str[i] !== "\n") {
-        i++;
-      }
-
-      for (var ind = 2; ind < i; ind++) {
-        delimeter = delimeter + str[ind];
-      }
-
-      if (delimeter !== "") {
-        regexp = new RegExp(delimeter);
-      }
-    }
-
+    var delimiter =  str.split(/\n/)[0].split(/\/\//)[1];
+    if (delimiter)
+      regexp = new RegExp(delimiter);
     var strArray = str.split(regexp);
     var numbers = [];
 
