@@ -17,7 +17,7 @@ module.exports = function Calculator() {
         return;
       }
       if (parseInt(item)<0)
-        throw new Error('negative value exception: '+item);
+        throw new Error('negatives not allowed: '+item);
       numbers.push(parseInt(item));
     });
 
