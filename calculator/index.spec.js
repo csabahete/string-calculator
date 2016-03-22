@@ -64,5 +64,13 @@ describe('Calculator', function() {
         expect(result).to.equal(2);
       });
     });
+
+    describe('custom delimiter', function() {
+      it('should can be any length', function() {
+        var calculator = new Calculator();
+        var result = calculator.add("//apple\n1apple2apple3apple4");
+        expect(result).to.equal(10);
+      });
+    });
   });
 });
